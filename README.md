@@ -1,6 +1,6 @@
 # Reverse Engineering Code - Tutorial
 
-## config
+### config >>>
 ### middleware >>> isAuthenticated.js
 ```
 Custom middleware for checking if a user is logged in and redirecting them to the login page if they are not. 
@@ -18,7 +18,7 @@ Dependencies: passport, passport-local, models
 Authentication middleware that is checking if the username and password combination entered exists in the User database. The serialize and deserialize methods allow the user to stay signed in even as the app re-routes to different HTML pages.
 ```
 
-## models
+### models >>>
 ### index.js
 ```
 Dependencies: fs, path, sequelize, config.json
@@ -33,7 +33,7 @@ Dependencies: bcryptjs
 Creates a model for the User table with proper validation. bcryptjs is used to hash passwords so that they can be safely stored and read in the database.
 ```
 
-## public
+### public >>>
 ### js >>> login.js
 ```
 Dependencies: login form, email input, password input
@@ -79,7 +79,7 @@ Dependencies: style.css, signup.js
 HTML for the signup page with a form that contains inputs for email and password, a signup button and a link to the login page.
 ```
 
-## routes
+### routes >>>
 ### api-routes.js
 ```
 Dependencies: models, passport
@@ -94,6 +94,7 @@ Dependencies: path, isAuthenticated.js
 Creates routing for navigating the HTML pages. Page routes include: get requests for redirecting users to the members page after signup or login and a get request for all redirections to the members page that uses the custom isAuthenticated.js middleware to check if the user is logged in before allowing redirection to the members page.
 ```
 
+### >>>
 ### package.json
 ```
 Contains overview information about our node project including the name, version, description, author and license. It also includes a list of all project dependencies that will be load on "npm install"
