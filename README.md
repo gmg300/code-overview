@@ -105,3 +105,19 @@ Dependencies: express, express-session, passport, models, routes
 
 Initializes the entire app. First loads dependencies then sets up a port and requires all models. Next sets up express app and configures middleware, including express session which allows the use of sessions to track user info (login status) across multiple HTTP requests and re-routing. Finally, loads api and html routes and then syncs models to the database and begins listening at the appropriate port, at this point the app is now running. 
 ```
+
+## Contributing
+Download the files and navigate to the root folder run the following command in your preferred terminal:
+```sh
+npm i
+```
+Next create a local mysql database and change the credentials in the "development" object to match your password and database name.
+Finally, run either of the following commands from the root folder of the project:
+```sh
+npm start
+
+node server.js
+```
+The app should now be up and running at the address indicated in your console, you can now create new models for the database in the models folder and expand the members.html page to contain more information and content for users. 
+
+When creating new features in your app be sure to create your front-end in the html files, then handle front-end events in the associated .js file, next create a new .js file in the models folder to define a new table and finally create routes to POST, GET, PUT or DELETE from your new table in the api-routes.js file. 
